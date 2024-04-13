@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/69dbee048f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <form id="taxForm">
+            <div class="input-group">
+                <label for="grossIncome">Enter Gross Annual Income:</label>
+                <input type="text" id="grossIncome" required placeholder="Enter Gross Annual Income">
+                <span class="fa fa-info-circle errspan" style="display: none;"
+                    data-tooltip="Please enter a valid number"></span>
+
+            </div>
+
+            <div class="input-group">
+                <label for="extraIncome">Enter Extra Income:</i></label>
+                <input type="text" id="extraIncome" required placeholder="Enter Extra Income">
+                <span class="fa fa-info-circle errspan" style="display: none;"
+                    data-tooltip="Please enter a valid number"></span>
+
+            </div>
+            <div class="input-group">
+                <label for="age">Enter Age Group:</i></label>
+                <select id="age" required>
+                    <option value="" disabled selected>Select Age Group</option>
+                    <option value="<40">&lt;40</option>
+                    <option value="≥40 &lt;60">&ge;40 &lt;60</option>
+                    <option value="≥60">&ge;60</option>
+                </select>
+                <span class="fa fa-info-circle errspan" style="display: none;"
+                    data-tooltip="Please enter a valid number"></span>
+
+            </div>
+            <div class="input-group">
+                <label for="deductions">Enter Total Applicable Deductions:</i></label>
+                <input type="text" id="deductions" required placeholder="Enter Total Applicable Deductions">
+                <span class="fa fa-info-circle errspan" style="display: none;"
+                    data-tooltip="Please enter a valid number"></span>
+
+            </div>
+            <button type="submit" id="calculateBtn">Calculate</button>
+        </form>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Final Calculation</h2>
+            <p id="finalTax"></p>
+<p id="totalIncomeAfterTax"></p>
+
+      
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
